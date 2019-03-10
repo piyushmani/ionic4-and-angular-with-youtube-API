@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{firstDetails.title}} vs {{secondDetails.title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+  <ion-img  style="height: 50px;" [src]="firstDetails.img.url"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{firstDetails.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ng2-odometer [number]="firstCounter" [config]="{ }"></ng2-odometer>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-img style="height: 50px;" [src]="secondDetails.img.url"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{secondDetails.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+        <ng2-odometer [number]="secondCounter" [config]="{ }"></ng2-odometer>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+
+  <ion-card-content>
+    <p>{{winner.title}} is ahead by :</p>
+        <ng2-odometer [number]="winner.diff" [config]="{ }"></ng2-odometer>
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
